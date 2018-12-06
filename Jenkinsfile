@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'apt-get install cowsay'
-				sh 'apt-get install fortune'
-				sh 'cowsay | fortune'
+                sh 'sudo apt-get install cowsay'
+				sh 'sudo apt-get install fortune'
+				sh 'sudo cowsay | fortune'
             }
         }
     }
