@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent { docker { image 'ubuntu' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'apt-get install cowsay'
+				sh 'apt-get install fortune'
+				sh 'cowsay | fortune'
             }
         }
     }
